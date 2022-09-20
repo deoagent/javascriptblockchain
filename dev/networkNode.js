@@ -31,6 +31,12 @@ app.post('/transaction', function(req, res){
    res.json({ note:`Transaction will be added in block ${blockIndex}.` });
 });
 
+//transaction broadcast
+// app.post('/transaction/broadcast', function(req, res) {
+//   const createNewTransaction = bitcoin.createNewTransaction(req.body.amount, req.body.sender, req.body.recipient);
+
+// });
+
 
 // mine a new block
 app.get('/mine', function(req, res){
@@ -109,6 +115,7 @@ app.post('/register-nodes-bulk', function(req, res) {
 
     res.json({ note: 'Bulk registration successful.' });
 });
+
 
 app.listen(port, () => {
     console.log(`Listening on port ${port}.....`);
