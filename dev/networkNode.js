@@ -130,6 +130,7 @@ app.post('/receive-new-block', function(req, res) {
     }
 });
 
+
 //register a node and broadcast it in the whole network
 app.post('/register-and-broadcast-node', function(req, res) {
   const newNodeUrl = req.body.newNodeUrl;
